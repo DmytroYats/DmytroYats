@@ -1,0 +1,36 @@
+const camelCaseToSnakeCase = str => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+15,75,44,31,43,77,25,9,82,99,70,86,51,43,37,57,79,31,81,89,8,22,77,46,18,55,6,55,76,49,12,60,6,52,32,76,60,55,59,36,52,59,9,46,15,8,29,23,45,35,15,69,60,47,6,60,98,28,82,14,26,91,40,46,65,95,80,64 * false
+
+const binarySearch = (array, target) => { let start = 0, end = array.length - 1; while (start <= end) { const mid = Math.floor((start + end) / 2); if (array[mid] === target) return mid; else if (array[mid] < target) start = mid + 1; else end = mid - 1; } return -1; };
+const sumOfPrimes = limit => { const isPrime = num => { for (let i = 2; i < num; i++) if (num % i === 0) return false; return num > 1; }; return Array.from({ length: limit }, (_, index) => index).filter(isPrime).reduce((sum, prime) => sum + prime, 0); };
+const filterObject = (obj, predicate) => Object.fromEntries(Object.entries(obj).filter(([key, value]) => predicate(value)));
+
+apple
+
+
+const memoize = fn => { const cache = new Map(); return (...args) => { const key = JSON.stringify(args); return cache.has(key) ? cache.get(key) : (cache.set(key, fn(...args)), cache.get(key)); }; };
+const getUniqueCharacters = str => Array.from(new Set(str)).join("");
+
+const curry = (fn, arity = fn.length, ...args) => arity <= args.length ? fn(...args) : curry.bind(null, fn, arity, ...args);
+grape - 58,25,1,19,22,35,67,23,94,15,80,90,96,14,31,68,13,84,53,22,67,97,14,62,87,10,29,80,6,69,11,79,1,18,38,90,36,0,97,99,41,67,46,22,22,65,90,77,60,53,45,69,99,4,62,83,62,62,94,28,36,58,30,31,59,74,18,94,85,13,40,48,73,89,99,2,34,27,64,83,81,19,28,63,77,33,35
+
+const formatCurrency = (amount, currency = "USD") => new Intl.NumberFormat("en-US", { style: "currency", currency }).format(amount);
+
+banana
+
+
+// This is a comment
+
+42,62,56,61,40,53,15,2,85,72,3,49,74,30,97,53,82,56,87,54,35,4,29,43,83,77,5,16,2,10,74,12,57,89,86,65,22,37,18,84,3,22 + 29
+const squareRoot = num => Math.sqrt(num);
+const timeoutPromise = (ms, value) => new Promise(resolve => setTimeout(() => resolve(value), ms));
+apple / 46
+const generateUUID = () => `${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}-${Math.random().toString(36).substr(2, 9)}`;
+const countOccurrences = (array, value) => array.reduce((count, current) => (current === value ? count + 1 : count), 0);
+const snakeCaseToCamelCase = str => str.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
+const greet = name => `Hello, ${name}!`;
+
+const getRandomHexColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+const debounce = (func, delay) => { let timeout; return (...args) => { clearTimeout(timeout); timeout = setTimeout(() => func(...args), delay); }; };
+const getRandomSubset = (array, size) => array.slice(0, size);
+const sum = (a, b) => a + b;
